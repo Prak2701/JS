@@ -1,2 +1,2 @@
 # JS
-A code repo of Jabascript
+A code repo of Javascript
