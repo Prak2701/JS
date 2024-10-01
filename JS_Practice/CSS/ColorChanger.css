@@ -1,7 +1,7 @@
 .main{
     width: 100%;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 .main span{
     border: 2px solid black;
@@ -9,14 +9,23 @@
     height: 100px;
     margin: 5px;
 }
-.heading{
-    display: flexbox;
+.heading {
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: aquamarine;
+    padding: 0px;
+    width: 200px; /* Set a width for the div */
+    margin: 0 auto; /* Center it horizontally */
     text-align: center;
+}
+/* .heading{
+    display: flex;
+    justify-content: center;
     border: 1px solid black;
     border-radius: 3px;
     background-color: aquamarine;
     width: 50%;
-}
+} */
 #grey{
     background-color: grey;
 }
