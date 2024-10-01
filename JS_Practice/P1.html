@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .clsdiv {
+        background-color: chocolate;
+        padding: 5px;
+        border: 2px solid red;
+        border-radius: 5px;
+        margin-left: 3px;
+      }
+      .clslist {
+        list-style-type: decimal;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(5, 3, 3); color: #fff">
+    <div id="newdiv" class="clsdiv"></div>
+  </body>
+
+  <script>
+    const arrList = ["TypeScript", "JavaScript", "HTML", "CSS", "React", "Vue", "Angular", "NodeJS", "ExpressJS", "MongoDB", "MySQL"];
+    let ullist = null;
+    function addElement(li) {
+      if (ullist !== null) {
+        const lilist = document.createElement("li");
+        ullist.className = "clslist";
+        document.querySelector("#newdiv").appendChild(ullist);
+        lilist.innerHTML = `${li}`;
+        ullist.appendChild(lilist);
+      } else {
+        ullist = document.createElement("ul");
+        const lilist = document.createElement("li");
+        ullist.className = "clslist";
+        document.querySelector("#newdiv").appendChild(ullist);
+        lilist.innerHTML = `${li}`;
+        ullist.appendChild(lilist);
+        console.log(ullist);
+      }
+    }
+    for(let i = 0; i < arrList.length; i++) {
+      addElement(arrList[i]);
+    }
+  </script>
+</html>
